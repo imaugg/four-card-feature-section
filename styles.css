@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100%;
+    background: #FAFAFA;
+    display: grid;
+    padding: 5.5% 11.5%;
+    grid-template-rows: 30.5% auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "text text text" "c1 c2 c4" "c1 c3 c4";
+}
+
+.text-container {
+    grid-area: text;
+    max-width: 540px;
+    max-height: 171px;
+    justify-self: center;
+    color: #4D4F62;
+    text-align: center;
+}
+
+.text-container-title {
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.text-container-subtitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.c1 {
+    grid-area: c1;
+    align-self: center;
+    justify-self: end;
+    border-top: 4px solid #44D3D2;
+
+}
+
+.c2 {
+    grid-area: c2;
+    border-top: 4px solid #EA5454;
+    align-self: start;
+    justify-self: center;
+    margin: 0 20px 20px 20px;
+}
+
+.c3 {
+    grid-area: c3;
+    border-top: 4px solid #FCAE4A;
+    align-self: end;
+    justify-self: center;
+    margin: 0 20px;
+}
+
+.c4 {
+    grid-area: c4;
+    align-self: center;
+    justify-self: start;
+    border-top: 4px solid #549EF2;
+}
+
+.card {
+    max-width: 350px;
+    max-height: 250px;
+    padding: 6.5%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px 6px rgba(131, 166, 210, 0.5);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.card-text {
+    font-size: 20px;
+    color: #4D4F62;
+    font-weight: 600;
+}
+
+.card-text > span {
+    opacity: 50%;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.card > img {
+    justify-self: end;
+    align-self: end;
+}
+
+@media screen and (max-width: 900px) {
+
+    .wrapper {
+        padding: 86px 32px 78px 32px;
+        height: unset;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "text" "c1" "c2" "c3" "c4";
+    }
+
+    .card {
+        align-self: center;
+        justify-self: center;
+        margin: 0 0 24px 0;
+    }
+
+    .c4 {
+        margin: 0;
+    }
+
+    .card > img {
+        height: 57px;
+    }
+
+    .text-container {
+        align-self: start;
+        max-height: unset;
+    }
+
+    .text-container-title, .text-container-subtitle {
+        font-size: 24px;
+    }
+
+}
